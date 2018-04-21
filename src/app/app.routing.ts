@@ -1,7 +1,7 @@
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {UserPanelComponent} from './user-panel/user-panel.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {HomeComponent} from './home/home.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path: 'user-panel', component: UserPanelComponent},
@@ -11,6 +11,5 @@ const appRoutes: Routes = [
 ];
 
 export const routing = RouterModule.forRoot(
-  appRoutes,
-  {preloadingStrategy: PreloadAllModules}
+  appRoutes
 );
