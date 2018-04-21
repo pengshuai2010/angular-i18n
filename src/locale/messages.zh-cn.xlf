@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
@@ -12,13 +12,15 @@
         </context-group>
         <note priority="1" from="description">An introduction header for this sample</note>
         <note priority="1" from="meaning">User welcome</note>
+        <target state="final">你好 i18n！</target>
       </trans-unit>
       <trans-unit id="noOutput" datatype="html">
-        <source>I don&apos;t output any element</source>
+        <source>I don't output any element</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <target state="final">我不输出任何元素</target>
       </trans-unit>
       <trans-unit id="logoTitle" datatype="html">
         <source>Angular logo</source>
@@ -26,6 +28,7 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
+        <target state="final">Angular 标志</target>
       </trans-unit>
       <trans-unit id="updatedTime" datatype="html">
         <source>Updated
@@ -35,6 +38,9 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
+        <target state="final">已更新
+          <x id="ICU"/>
+        </target>
       </trans-unit>
       <trans-unit id="5a134dee893586d02bffc9611056b9cadf9abfad" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {
@@ -45,6 +51,10 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
+        <target state="final">{VAR_PLURAL, plural, =0 {刚才} =1 {一分钟前} other {
+          <x id="INTERPOLATION"/>
+          分钟前} }
+        </target>
       </trans-unit>
       <trans-unit id="theAuthor" datatype="html">
         <source>The author is
@@ -54,6 +64,9 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
+        <target state="final">作者是
+          <x id="ICU"/>
+        </target>
       </trans-unit>
       <trans-unit id="4e6fd3f2bb3477e8ad2088f03257f6e1b8b515a5" datatype="html">
         <source>{VAR_SELECT, select, m {male} f {female} o {other} }</source>
@@ -61,6 +74,7 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
+        <target state="final">{VAR_SELECT, select, m {男性} f {女性} o {其他}}</target>
       </trans-unit>
       <trans-unit id="updatedBy" datatype="html">
         <source>Updated:
@@ -70,6 +84,9 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
+        <target state="final">已更新:
+          <x id="ICU"/>
+        </target>
       </trans-unit>
       <trans-unit id="80b5ac44661751e191225c0b1e000bceeeccb52c" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {
@@ -80,6 +97,10 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
+        <target state="final">{VAR_PLURAL, plural, =0 {刚才} =1 {一分钟前} other {
+          <x id="INTERPOLATION"/>
+          分钟前被 {VAR_SELECT, select, m {男性} f {女性} o {其他} }} }
+        </target>
       </trans-unit>
     </body>
   </file>
