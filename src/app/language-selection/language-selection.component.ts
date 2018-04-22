@@ -13,7 +13,7 @@ export class LanguageSelectionComponent implements OnInit {
   ];
 
   constructor(@Inject(LOCALE_ID) protected localeId: string,
-              private location: Location) {
+              public location: Location) {
   }
 
   ngOnInit() {
