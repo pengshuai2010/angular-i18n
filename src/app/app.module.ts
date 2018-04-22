@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 import {AppComponent} from './app.component';
 import {UserPanelComponent} from './user-panel/user-panel.component';
@@ -14,6 +15,7 @@ import {LanguageSelectionComponent} from './language-selection/language-selectio
     routing
   ],
   declarations: [AppComponent, UserPanelComponent, PageNotFoundComponent, HomeComponent, LanguageSelectionComponent],
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

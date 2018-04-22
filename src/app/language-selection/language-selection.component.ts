@@ -1,4 +1,5 @@
 import {Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 @Component({
   selector: 'app-language-selection',
@@ -11,7 +12,8 @@ export class LanguageSelectionComponent implements OnInit {
     {code: 'zh-cn', label: '简体中文'}
   ];
 
-  constructor(@Inject(LOCALE_ID) protected localeId: string) {
+  constructor(@Inject(LOCALE_ID) protected localeId: string,
+              private location: Location) {
   }
 
   ngOnInit() {

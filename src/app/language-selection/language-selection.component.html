@@ -1,6 +1,7 @@
+<p>current path: {{location.path()}}</p>
 <p>Language/语言</p>
 <div *ngFor="let language of languages">
-  <a *ngIf="localeId !== language.code" href="/{{language.code}}/">{{language.label}}</a>
+  <a *ngIf="localeId !== language.code" href="/{{language.code + location.path()}}">{{language.label}}</a>
   <a *ngIf="localeId === language.code" href="javascript:void(0)">{{language.label}}</a>
 </div>
 <br>
