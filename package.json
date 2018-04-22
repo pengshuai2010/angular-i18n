@@ -13,7 +13,7 @@
     "start:fr": "ng serve --aot --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
     "build:fr": "ng build --prod --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
     "extract": "ng xi18n --outputPath=src/locale",
-    "build-i18n": "rm -r dist/ && for lang in zh-CN; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/  --locale=en && cp _redirects dist/_redirects"
+    "build-i18n": "for lang in zh-CN; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/  --locale=en && cp _redirects dist/_redirects"
   },
   "keywords": [],
   "author": "",
