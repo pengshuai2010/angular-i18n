@@ -24,7 +24,8 @@
   =1 {one minute ago}
   other {{{minutes}} minutes ago by {gender, select, m {male} f {female} o {other}}}}
 </span>
-<p>locale is {{locale}}</p>
+<p>current locale is {{locale}}</p>
+<app-language-selection></app-language-selection>
 <a [routerLink]="['home']">Home</a>
 <br>
 <a [routerLink]="['user-panel']">User Panel</a>
