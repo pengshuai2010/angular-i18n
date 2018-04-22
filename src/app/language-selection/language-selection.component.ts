@@ -9,7 +9,8 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 export class LanguageSelectionComponent implements OnInit {
   languages = [
     {code: 'en', label: 'English'},
-    {code: 'zh-cn', label: '简体中文'}
+    {code: 'zh-cn', label: '简体中文'},
+    {code: 'zh-tw', label: '繁體中文'}
   ];
 
   constructor(@Inject(LOCALE_ID) protected localeId: string,

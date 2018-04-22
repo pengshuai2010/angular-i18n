@@ -1,4 +1,8 @@
 /zh-cn/* /zh-cn/index.html 200
+/zh-tw/* /zh-tw/index.html 200
 /en/* /en/index.html 200
 /*  /zh-cn/:splat  302  Language=zh-CN
+/*  /zh-cn/:splat  302  Language=zh-SG
+/*  /zh-tw/:splat  302  Language=zh-TW
+/*  /zh-tw/:splat  302  Language=zh-HK
 /*  /en/:splat  302
