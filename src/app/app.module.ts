@@ -1,8 +1,8 @@
-import {NgModule, TRANSLATIONS} from '@angular/core';
+import {LOCALE_ID, MissingTranslationStrategy, NgModule, TRANSLATIONS, TRANSLATIONS_FORMAT} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 // Import the service
-import {I18n} from '@ngx-translate/i18n-polyfill';
+import {I18n, MISSING_TRANSLATION_STRATEGY} from '@ngx-translate/i18n-polyfill';
 
 import {AppComponent} from './app.component';
 import {UserPanelComponent} from './user-panel/user-panel.component';
@@ -12,7 +12,6 @@ import {routing} from './app.routing';
 import {LanguageSelectionComponent} from './language-selection/language-selection.component';
 
 declare const require; // Use the require method provided by webpack
-export const translations = require(`raw-loader!../locale/messages.zh-cn.xlf`);
 
 @NgModule({
   imports: [
@@ -23,7 +22,18 @@ export const translations = require(`raw-loader!../locale/messages.zh-cn.xlf`);
   providers: [
     Location,
     {provide: LocationStrategy, useClass: PathLocationStrategy},
-    {provide: TRANSLATIONS, useValue: translations},
+    {
+      provide: TRANSLATIONS,
+      useFactory: (locale) => {
+        locale = locale || 'en'; // default to english if no locale provided
+        return require(`raw-loader!../locale/messages.${locale}.xlf`);
+      },
+      deps: [LOCALE_ID]
+    },
+    // format of translations that you use
+    {provide: TRANSLATIONS_FORMAT, useValue: 'xlf'},
+// optional, defines how error will be handled
+    {provide: MISSING_TRANSLATION_STRATEGY, useValue: MissingTranslationStrategy.Warning},
     I18n,
   ],
   bootstrap: [AppComponent]
