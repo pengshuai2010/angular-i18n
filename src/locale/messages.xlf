@@ -14,7 +14,7 @@
         <note priority="1" from="meaning">User welcome</note>
       </trans-unit>
       <trans-unit id="noOutput" datatype="html">
-        <source>I don&apos;t output any element</source>
+        <source>I don't output any element</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">5</context>
@@ -33,7 +33,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5a134dee893586d02bffc9611056b9cadf9abfad" datatype="html">
@@ -43,7 +43,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="theAuthor" datatype="html">
@@ -52,14 +52,14 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4e6fd3f2bb3477e8ad2088f03257f6e1b8b515a5" datatype="html">
         <source>{VAR_SELECT, select, m {male} f {female} o {other} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="updatedBy" datatype="html">
@@ -68,7 +68,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="80b5ac44661751e191225c0b1e000bceeeccb52c" datatype="html">
@@ -78,7 +78,27 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ecfaea6124e8f57c9d3a4db71cc384ae67b5ae2" datatype="html">
+        <source>This is a test
+          <x id="INTERPOLATION" equiv-text="{{myVar}}"/>
+          !
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="78e9f3aab47c6cf393131413e0c51dedaa37766b" datatype="html">
+        <source>This is a test
+          <x id="INTERPOLATION" equiv-text="{{ok}}"/>
+          !
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
     </body>
