@@ -15,7 +15,7 @@
     "ngx-extractor": "ngx-extractor -i src/app/*.ts src/app/**/*.ts src/app/**/**/*.ts -f xlf -o src/locale/messages.xlf",
     "ng-xi18n": "ng xi18n --outputPath=src/locale",
     "extract": "npm run ng-xi18n && npm run ngx-extractor",
-    "build-i18n": "for lang in zh-cn zh-tw; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/  --locale=en && cp _redirects dist/_redirects"
+    "build-i18n": "for lang in zh-cn zh-tw; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --missingTranslation=Warning --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/ --i18n-format=xlf --missingTranslation=Warning --locale=en && cp _redirects dist/_redirects"
   },
   "keywords": [],
   "author": "",
