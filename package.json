@@ -10,10 +10,8 @@
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e --aot --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
-    "start:fr": "ng serve --aot --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
-    "build:fr": "ng build --prod --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
     "ngx-extractor": "ngx-extractor -i 'src/app/**/*.ts' -f xlf -o src/locale/messages.xlf",
-    "ng-xi18n": "ng xi18n --outputPath=src/locale",
+    "ng-xi18n": "ng xi18n -f xlf --output-path=src/locale --outFile=messages.xlf --locale=en",
     "extract": "npm run ng-xi18n && npm run ngx-extractor",
     "build-i18n": "for lang in zh-cn zh-tw; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --missingTranslation=Warning --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/ --i18n-format=xlf --missingTranslation=Warning --locale=en && cp _redirects dist/_redirects"
   },
