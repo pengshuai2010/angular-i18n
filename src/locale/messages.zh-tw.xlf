@@ -51,7 +51,7 @@
 
         <target state="final">{VAR_PLURAL, plural, =0 {剛才} =1 {一分鐘前} other {
           <x id="INTERPOLATION"/>
-          分鐘前} }
+          分鐘前}}
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
@@ -112,7 +112,7 @@
         <source>hello
           <x id="INTERPOLATION" equiv-text="{{guest}}"/>
         </source>
-        <target>你好
+        <target state="final">你好
           <x id="INTERPOLATION" equiv-text="{{guest}}"/>
         </target>
         <context-group purpose="location">
@@ -123,6 +123,62 @@
         <note priority="1" from="meaning">Custom meaning</note>
       </trans-unit>
 
+      <trans-unit id="85369d5225255acb9abed61ddc0903da70633e0a" datatype="html">
+        <source>apple</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">蘋果</target>
+      </trans-unit>
+      <trans-unit id="6fbdcfdd8ee26615c2b454e61189d1ddc53a0691" datatype="html">
+        <source>orange</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">橘子</target>
+      </trans-unit>
+      <trans-unit id="99679f5d9ccb31e7a3a08d8e3d83702b1368048b" datatype="html">
+        <source>pear</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">梨</target>
+      </trans-unit>
+      <trans-unit id="8004cb93eab82a3bca399f55d1e1aa082ac92e5e" datatype="html">
+        <source>peach</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">桃子</target>
+      </trans-unit>
+      <trans-unit id="53c3567cc1f7c64e21cdb035baab1ac68c9fdb27" datatype="html">
+        <source>grape</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">葡萄</target>
+      </trans-unit>
+      <trans-unit id="8d0a6503eb2c2fbdc51a1bac77fa1003a2c4fe7d" datatype="html">
+        <source>banana</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">香蕉</target>
+      </trans-unit>
+      <trans-unit id="be5f4600740fe0a52a079e725553bc0bb74518e8" datatype="html">
+        <source>pineapple</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">鳳梨</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
