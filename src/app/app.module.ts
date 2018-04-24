@@ -26,6 +26,9 @@ declare const require; // Use the require method provided by webpack
       provide: TRANSLATIONS,
       useFactory: (locale) => {
         locale = locale || 'en'; // default to english if no locale provided
+        if (locale === 'en') {
+          return require(`raw-loader!../locale/messages.xlf`);
+        }
         return require(`raw-loader!../locale/messages.${locale}.xlf`);
       },
       deps: [LOCALE_ID]

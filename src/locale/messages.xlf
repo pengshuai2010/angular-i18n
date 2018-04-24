@@ -6,6 +6,9 @@
         <source>
           Hello i18n!
         </source>
+        <target>
+          Hello i18n!
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">1</context>
@@ -15,6 +18,7 @@
       </trans-unit>
       <trans-unit id="noOutput" datatype="html">
         <source>I don't output any element</source>
+        <target>I don't output any element</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">5</context>
@@ -22,6 +26,7 @@
       </trans-unit>
       <trans-unit id="logoTitle" datatype="html">
         <source>Angular logo</source>
+        <target>Angular logo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">9</context>
@@ -31,6 +36,9 @@
         <source>Updated
           <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/>
         </source>
+        <target>Updated
+          <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -41,6 +49,10 @@
           <x id="INTERPOLATION" equiv-text="{{minutes}}"/>
           minutes ago} }
         </source>
+        <target>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {
+          <x id="INTERPOLATION" equiv-text="{{minutes}}"/>
+          minutes ago} }
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -50,6 +62,9 @@
         <source>The author is
           <x id="ICU" equiv-text="{gender, select, m {...} f {...} o {...}}"/>
         </source>
+        <target>The author is
+          <x id="ICU" equiv-text="{gender, select, m {...} f {...} o {...}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -57,6 +72,7 @@
       </trans-unit>
       <trans-unit id="4e6fd3f2bb3477e8ad2088f03257f6e1b8b515a5" datatype="html">
         <source>{VAR_SELECT, select, m {male} f {female} o {other} }</source>
+        <target>{VAR_SELECT, select, m {male} f {female} o {other} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -66,6 +82,9 @@
         <source>Updated:
           <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/>
         </source>
+        <target>Updated:
+          <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -76,30 +95,28 @@
           <x id="INTERPOLATION" equiv-text="{{minutes}}"/>
           minutes ago by {VAR_SELECT, select, m {male} f {female} o {other} }} }
         </source>
+        <target>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {
+          <x id="INTERPOLATION" equiv-text="{{minutes}}"/>
+          minutes ago by {VAR_SELECT, select, m {male} f {female} o {other} }} }
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6ecfaea6124e8f57c9d3a4db71cc384ae67b5ae2" datatype="html">
-        <source>This is a test
-          <x id="INTERPOLATION" equiv-text="{{myVar}}"/>
-          !
+      <trans-unit id="customId" datatype="html">
+        <source>hello
+          <x id="INTERPOLATION" equiv-text="{{guest}}"/>
         </source>
+        <target>hello
+          <x id="INTERPOLATION" equiv-text="{{guest}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.ts</context>
           <context context-type="linenumber">1</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="78e9f3aab47c6cf393131413e0c51dedaa37766b" datatype="html">
-        <source>This is a test
-          <x id="INTERPOLATION" equiv-text="{{ok}}"/>
-          !
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.ts</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
+        <note priority="1" from="description">Custom desc</note>
+        <note priority="1" from="meaning">Custom meaning</note>
       </trans-unit>
     </body>
   </file>

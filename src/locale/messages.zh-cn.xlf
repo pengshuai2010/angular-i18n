@@ -102,6 +102,20 @@
           分钟前被 {VAR_SELECT, select, m {男性} f {女性} o {其他} }} }
         </target>
       </trans-unit>
+      <trans-unit id="customId" datatype="html">
+        <source>hello
+          <x id="INTERPOLATION" equiv-text="{{guest}}"/>
+        </source>
+        <target>你好
+          <x id="INTERPOLATION" equiv-text="{{guest}}"/>
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Custom desc</note>
+        <note priority="1" from="meaning">Custom meaning</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>
