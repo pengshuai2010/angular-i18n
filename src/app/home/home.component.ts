@@ -7,7 +7,7 @@ import {I18n} from '@ngx-translate/i18n-polyfill';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  fruites = ['apple', 'orange', 'pear', 'peach', 'grape', 'banana', 'pineapple'];
+  fruits = ['apple', 'orange', 'pear', 'peach', 'grape', 'banana', 'pineapple'];
   greeting = this.i18n({id: 'customId', value: 'hello {{guest}}', description: 'Custom desc', meaning: 'Custom meaning'},
     {guest: 'world'});
 
