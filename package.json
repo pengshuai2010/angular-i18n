@@ -6,14 +6,15 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build --prod",
-    "start": "ng serve --aot",
+    "start-en": "ng serve --aot --i18n-file=src/locale/messages.en.xlf --locale=en --i18n-format=xlf",
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e --aot --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
     "ngx-extractor": "ngx-extractor -i 'src/app/**/*.ts' -f xlf -o src/locale/messages.xlf",
     "ng-xi18n": "ng xi18n -f xlf --output-path=src/locale --outFile=messages.xlf --locale=en",
     "extract": "npm run ng-xi18n && npm run ngx-extractor",
-    "build-i18n": "for lang in zh-cn zh-tw; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --missingTranslation=Warning --locale=$lang; done && ng build --prod --output-path=dist/en --bh /en/ --i18n-format=xlf --missingTranslation=Warning --locale=en && cp _redirects dist/_redirects"
+    "i18n-merge": "for lang in en zh-cn zh-tw; do xliffmerge --profile xliffmerge.json $lang; done",
+    "build-i18n": "for lang in en zh-cn zh-tw; do ng build --output-path=dist/$lang --aot --prod --bh /$lang/ --i18n-file=src/locale/messages.$lang.xlf --i18n-format=xlf --missingTranslation=Warning --locale=$lang; done && cp _redirects dist/_redirects"
   },
   "keywords": [],
   "author": "",
@@ -53,6 +54,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "lodash": "^4.16.2",
+    "ngx-i18nsupport": "^0.15.0",
     "phantomjs-prebuilt": "^2.1.7",
     "protractor": "~5.1.0",
     "ts-node": "^3.3.0",
