@@ -163,14 +163,6 @@
         </context-group>
         <target state="final">葡萄</target>
       </trans-unit>
-      <trans-unit id="8d0a6503eb2c2fbdc51a1bac77fa1003a2c4fe7d" datatype="html">
-        <source>banana</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.ts</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-        <target state="final">香蕉</target>
-      </trans-unit>
       <trans-unit id="be5f4600740fe0a52a079e725553bc0bb74518e8" datatype="html">
         <source>pineapple</source>
         <context-group purpose="location">
@@ -178,6 +170,14 @@
           <context context-type="linenumber">1</context>
         </context-group>
         <target state="final">鳳梨</target>
+      </trans-unit>
+      <trans-unit id="a62bc0308b46be9bb05efba1a7f09107a21e2616" datatype="html">
+        <source>Kiwifruit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="final">奇異果</target>
       </trans-unit>
     </body>
   </file>

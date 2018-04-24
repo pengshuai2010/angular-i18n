@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private i18n: I18n) {
     this.fruits = [this.i18n('apple'), this.i18n('orange'), this.i18n('pear'), this.i18n('peach'), this.i18n('grape')
-      , this.i18n('banana'), this.i18n('pineapple')];
+      , this.i18n('Kiwifruit'), this.i18n('pineapple')];
   }
 
   ngOnInit() {
